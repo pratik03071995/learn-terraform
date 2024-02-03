@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['clone', 'https://github.com/pratik03071995/learn-terraform']
+  - name: 'hashicorp/terraform'
+    args: ['init']
+  - name: 'hashicorp/terraform'
+    args: ['apply', '-auto-approve']
