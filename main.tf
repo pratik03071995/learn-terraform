@@ -1,14 +1,7 @@
 
 provider "google" {
-  credentials = file(var.google_credentials)
   project     = var.google_project
   region      = var.google_region
-}
-
-# Define input variables
-variable "google_credentials" {
-  description = "Path to Google Cloud service account key JSON file."
-  type        = string
 }
 
 variable "google_project" {
