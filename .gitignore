@@ -1,2 +1,6 @@
 *.json
 numeric-chassis-412718-18373869df40.json
+*.tfstate
+*.tfstate.backup
+terraform.tfstate.d/
+.terraform/
