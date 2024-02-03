@@ -39,6 +39,12 @@ variable "table_id" {
   default     = "employee_table"
 }
 
+variable "table_id_2" {
+  description = "ID of the BigQuery table."
+  type        = string
+  default     = "test_table"
+}
+
 
 resource "google_storage_bucket" "my_bucket" {
   name     = var.bucket_name
@@ -74,6 +80,36 @@ resource "google_bigquery_table" "my_table" {
         "type": "FLOAT",
         "mode": "REQUIRED",
         "description": "Employee Salary"
+      }
+    ]
+  JSON
+}
+
+resource "google_bigquery_table" "my_second_table" {
+  dataset_id = google_bigquery_dataset.my_dataset.dataset_id
+  project    = var.google_project
+  table_id   = var.table_id_2
+  deletion_protection = false
+
+  schema = <<-JSON
+    [
+      {
+        "name": "id",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": " ID"
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "Name"
+      },
+      {
+        "name": "age",
+        "type": "FLOAT",
+        "mode": "REQUIRED",
+        "description": "age"
       }
     ]
   JSON
