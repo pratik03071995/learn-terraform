@@ -5,3 +5,6 @@ steps:
     args: ['init']
   - name: 'hashicorp/terraform'
     args: ['apply', '-auto-approve']
+
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
