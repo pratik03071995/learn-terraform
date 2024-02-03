@@ -1,0 +1,6 @@
+google_credentials = "numeric-chassis-412718-18373869df40.json"
+google_project     = "numeric-chassis-412718"
+google_region      = "us-central1"
+bucket_name        = "fnu-pratik-bucket-name"
+dataset_id         = "fnu_pratik_dataset"
+table_id           = "test_table"
