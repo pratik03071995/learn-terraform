@@ -18,6 +18,9 @@ Before you begin, ensure you have met the following requirements:
 
 ## Getting Started
 
+Important --
+please manually delete the resource if you want to update the existing resounce in GCP . Pipelie will fail in case resource is already available . The pipeline only create new resource , does not support managing pre-deployed resources . 
+
 1. Clone the repository:
 
    ```bash
